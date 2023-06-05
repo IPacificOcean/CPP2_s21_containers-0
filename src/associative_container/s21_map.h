@@ -156,7 +156,7 @@ void S21Map<Key, Value, Compare, Alloc>::merge(S21Map &other) {
   auto size = other.size();
   auto end_elem = size - 1;
   for (size_t i = 0; i < size; ++i) {
-    auto res = insert(std::pair(it->first, it->second));
+    auto res = insert(std::pair<typename S21Map<Key, Value, Compare, Alloc>::iterator, bool>(it->first, it->second));
     if (res.second) {
       other.erase(it);
     }

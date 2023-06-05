@@ -223,7 +223,7 @@ S21Vector<value_type, Alloc> &
 S21Vector<value_type, Alloc>::operator=(const S21Vector &other) {
   if (this != &other) {
     S21Vector tmp = other;
-    tmp.swap(tmp);
+      this.swap(tmp);
   }
   return *this;
 }
